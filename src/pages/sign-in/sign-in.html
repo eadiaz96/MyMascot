@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+       <ion-title>Ingresa</ion-title> 
+    </ion-navbar>
+</ion-header>
+<ion-content >
+  <form [formGroup]="credentialsForm" >
+
+      <ion-card >
+          <ion-card-content>
+            
+          </ion-card-content>
+               
+      </ion-card>
+
+   <ion-item class="EspacioCorreo">  
+      <ion-icon  name="md-at" item-start></ion-icon>
+      <ion-label  floating>Correo</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['email']"type="email"></ion-input>
+    </ion-item>
+   
+  <ion-item class="EspacioCorreo">
+    <ion-icon name="md-call" item-start></ion-icon>
+    <ion-label floating>Numero Celular</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['NumeroCelular']"type="number"></ion-input>
+  </ion-item>
+  
+  <ion-item class="EspacioCorreo">
+      <ion-icon name="md-eye" item-start></ion-icon>     
+      <ion-label floating>Contraseña</ion-label>         
+      <ion-input [formControl]="credentialsForm.controls['password']" placeholder="Password" name="password" type="password"></ion-input>
+    </ion-item> 
+ 
+    <ion-row >
+    <ion-col  text-center class="Ingresa">
+      <button  block ion-button (click)="MascotasRegistradasPage()" class="EspacioCorreo" ion-button block color="dark" type ="submit">        Ingresa
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row >
+    <ion-col class="EspacioCorreo" text-centry >
+      <button  ion-button clear color="dark" (click)="onForgotPassword()">
+        ¿Olvidaste tu contraseña?
+      </button>
+    </ion-col>  
+  </ion-row>
+
+</form>
+</ion-content>

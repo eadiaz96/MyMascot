@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NuevaMascota</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<form [formGroup]="nuevamascota">
+    <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [formControl]="nuevamascota.controls['email']"type="email"></ion-input>
+      </ion-item> 
+      <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input [formControl]="nuevamascota.controls['email']"type="email"></ion-input>
+        </ion-item> 
+</form>

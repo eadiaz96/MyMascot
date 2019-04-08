@@ -1,0 +1,7 @@
+{
+  "name": "EduardoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

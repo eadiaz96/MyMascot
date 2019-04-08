@@ -1,0 +1,99 @@
+<ion-header>
+    <ion-navbar>
+       <ion-title>Buenas</ion-title> 
+    </ion-navbar>
+</ion-header>
+
+<ion-content >
+    
+        <div padding>
+                <ion-segment [(ngModel)]="Opciones" color="dark">
+                  <ion-segment-button value="Mascotas">
+                        <ion-icon name="paw" item-start></ion-icon>   
+                    </ion-segment-button>
+                  <ion-segment-button  value="Servicios">
+                        <ion-icon name="globe" item-start></ion-icon> 
+                  </ion-segment-button>
+                  <ion-segment-button color="dark" value="MiCuenta"> 
+                        <ion-icon name="person" item-start></ion-icon>
+                  </ion-segment-button>
+                </ion-segment>
+        </div>
+              
+              <div [ngSwitch]="Opciones">
+                <ion-list *ngSwitchCase="'Mascotas'">
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                        <img src="/assets/imgs/log.png">
+                        </ion-thumbnail>
+                        <h2>Hertz</h2>
+                        <p> Macho • Perro</p>
+                        <button ion-button clear item-end>Eliminar</button>
+                  </ion-item>
+                </ion-list>
+              
+                <ion-list *ngSwitchCase="'Servicios'">
+                  <ion-item>
+                        <ion-card>
+                                <ion-card-header>Nuestros Servicios</ion-card-header>
+                               
+                                <ion-list>
+                                    <button ion-item>
+                                        <ion-icon name="clock" item-start></ion-icon>
+                                            Calendario Vacunas
+                                    </button>
+                              
+                                  <button ion-item>
+                                    <ion-icon name="heart" item-start></ion-icon>
+                                    Veterinaria
+                                  </button>
+                              
+                                  <button ion-item>
+                                    <ion-icon name="home" item-start></ion-icon>
+                                    Guarderia
+                                  </button>
+                              
+                                  <button ion-item>
+                                    <ion-icon name="bicycle" item-start></ion-icon>
+                                    Paseador
+                                  </button>
+                              
+                                  <button ion-item>
+                                    <ion-icon name="nutrition" item-start></ion-icon>
+                                    Alimentos
+                                  </button>
+                              
+                                  <button ion-item>
+                                    <ion-icon name="logo-bitcoin" item-start></ion-icon>
+                                    Tienda Virtual
+                                  </button>  
+                                </ion-list>
+                              </ion-card>
+                  </ion-item>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'MiCuenta'" color="dark">
+                        <ion-item>
+                                <ion-icon name="happy" item-start></ion-icon>
+                                Eduardo Diaz
+                              <ion-icon name="eye" item-end></ion-icon>
+                        </ion-item>
+                        <ion-item>
+                                <ion-icon name="mail-open" item-start></ion-icon>
+                                eadiaz96@gmail.com
+                              <ion-icon name="eye" item-end></ion-icon>
+                        </ion-item>
+                        <ion-item>
+                                <ion-icon name="briefcase" item-start></ion-icon>
+                                Bogotá
+                              <ion-icon name="eye" item-end></ion-icon>
+                             
+                        </ion-item>
+                      </ion-list>
+
+
+
+
+              </div>
+              
+</ion-content>
